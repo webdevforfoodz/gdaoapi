@@ -1,0 +1,23 @@
+{
+  "name": "gdaoapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "14.15.3"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "web3": "^1.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
