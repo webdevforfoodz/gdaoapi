@@ -8,7 +8,7 @@ router.get('/', calcCirculating);
 
 async function calcCirculating(req,res) {
 
-    const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/e35323bc24d243c6a971cefcaaa55953"));
+    const web3 = new Web3(new Web3.providers.HttpProvider(infuraProvider));
     const gdaoContract = new web3.eth.Contract(minABI,GDAOAddress);
     let totalSupply = await gdaoContract.methods.totalSupply().call()/(10**18);
     let airdropUnclaimed = await gdaoContract.methods.balanceOf(AirdropAddress).call()/(10**18);
