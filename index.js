@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 import supply from './routes/supply.js'
 
 //Use routes
-app.use('/supplyinfo', supply);
+app.use('/api', supply);
 
 app.get('/', (req,res) => {
     res.send('Testing');

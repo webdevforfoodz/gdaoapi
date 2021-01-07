@@ -4,11 +4,7 @@ import Web3 from 'web3'
 
 const router = express.Router();
 
-router.get('/', (req,res) => {
-    res.send('we are on supply route');
-});
-
-router.get('/circulating', calcCirculating);
+router.get('/', calcCirculating);
 
 async function calcCirculating(req,res) {
 
@@ -21,7 +17,11 @@ async function calcCirculating(req,res) {
     let burnPurgatoryBalance = await gdaoContract.methods.balanceOf(BurnPurgatoryAddress).call()/(10**18);
     let circulatingSupply = (totalSupply - airdropUnclaimed - minesBalance - airdropRewardBalance - burnPurgatoryBalance);
 
-    res.status(200).json(circulatingSupply);
+    let jsonObj = [{
+        'circulatingSupply': circulatingSupply
+    }]
+    console.log(airdropUnclaimed)
+    res.status(200).json(jsonObj);
 }
 
 export default router;

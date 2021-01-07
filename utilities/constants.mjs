@@ -4,7 +4,7 @@ dotenv.config();
 //Addresses
 export const GDAOAddress = "0x515d7E9D75E2b76DB60F8a051Cd890eBa23286Bc";
 
-export const AirdropAddress = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
+export const AirdropAddress = "0x7ea0F8Bb2f01C197985C285E193dd5b8A69836c0";
 
 export const MinesAddress = "0x4DaC3e07316D2A31baABb252D89663deE8F76f09";
 
